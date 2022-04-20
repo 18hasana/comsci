@@ -9,12 +9,12 @@ while attempts > 0:
     usernameInput = input("\nPlease enter your username: ")
     passwordInput = input("\nPlease enter your password: ")
     
-    if usernameInput != username:
-        print("\nIncorrect Username")
-    elif passwordInput != password:
-        print("\nIncorrect Password")
-    else:
-        print(f"\nYou are logged in as {username}")
+    if (usernameInput == username) and (passwordInput != password):
+        print("\nyou have forgotten the password")
+    elif (usernameInput != username) and (passwordInput != password):
+        print("\naccess denied")
+    elif (usernameInput == username) and (passwordInput == password):
+        print(f"\naccess granted")
         break
     
     attempts -= 1
